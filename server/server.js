@@ -13,6 +13,6 @@ app.get('/api/:id', (req,res) => {
     console.log(req.params.id)
 })
 
-app.listen(process.env.POST || 3000, function() {
+app.listen(process.env.PORT || 3000, function() {
     console.log('Listening on PORT: 3000')
 })
