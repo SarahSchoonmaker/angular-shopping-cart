@@ -13,6 +13,10 @@ app.get('/api/:id', (req,res) => {
     console.log(req.params.id)
 })
 
+app.get('/*', (req, res) => {
+    res.sendFile(path.resolve(__dirname + '/../dist/index.html'));
+})
+
 app.listen(process.env.PORT || 3000, function() {
     console.log('Listening on PORT: 3000')
 })
